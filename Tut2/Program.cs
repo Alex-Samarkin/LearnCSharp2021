@@ -15,6 +15,10 @@ namespace Tut2
             string name = Console.ReadLine();
 
             Console.WriteLine($"Здрваствуйте, {name}");
+
+            Console.ReadLine();
+
+
         }
     }
 }
