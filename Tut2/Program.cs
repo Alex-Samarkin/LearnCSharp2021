@@ -33,7 +33,11 @@ namespace Tut2
 
             // добавьте необходимое
             Console.WriteLine("Если это радиус:");
-            Console.WriteLine("Длина окружности {Math.PI*x} Площадь круга {} Объем сферы {} ");
+            Console.WriteLine("Длина окружности {Math.PI*x} Площадь круга {Math.PI*x*x} Объем сферы {} ");
+
+            // добавьте необходимое
+            Console.WriteLine("Если это угол в радианах:");
+            Console.WriteLine("Sin {Math.Sin(x)} Cos {Math.Cos(x)} Tan {Math.Tan(x)} Cotan {1.0/Math.Tan(x)}");
 
             Console.ReadLine();
 
