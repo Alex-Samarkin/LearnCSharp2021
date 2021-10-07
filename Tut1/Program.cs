@@ -23,6 +23,11 @@ namespace Tut1
             //вывод
             Console.WriteLine("x= {0} y= {1} x+y= {2}",x,y,x+y);
             Console.ReadLine();
+
+            //вывод версия 2
+            Console.WriteLine($"x= {x,0:g15} y= {y,0:N-15} x+y= {x+y}");
+            Console.ReadLine();
+
         }
     }
 }
