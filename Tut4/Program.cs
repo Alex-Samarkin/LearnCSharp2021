@@ -14,6 +14,8 @@ namespace Tut4
             var r = new Random();
             // r.Next - методы генерации разных случайных чисел
 
+            //Console.BackgroundColor = ConsoleColor.DarkBlue;
+            //Console.ForegroundColor = ConsoleColor.Yellow;
 
             // цикл - повторяется 100 раз
             // i - счетчик цикла, каждую итерацию увеличивается на 1
@@ -23,6 +25,10 @@ namespace Tut4
             }
 
             Console.ReadLine();
+
+            //Console.BackgroundColor = ConsoleColor.Cyan;
+            //Console.ForegroundColor = ConsoleColor.DarkBlue;
+
 
             // цикл повторяется, пока не сгенерируется число, равное 50
             int value = 0;
@@ -35,7 +41,27 @@ namespace Tut4
             Console.ReadLine();
 
             // испраьте цикл так, чтобы он останавливался, если выпадет число, больше 50
+            value = 0;
 
+            //Console.BackgroundColor = ConsoleColor.DarkGreen;
+            //Console.ForegroundColor = ConsoleColor.Magenta;
+
+            //while (value<=50)
+            //{
+            //    value = r.Next(0, 101);
+            //    Console.WriteLine($"{value}");
+            //}
+
+            Console.ReadLine();
+
+            /// Попробуйте предположить, сколько в среднем раз повторится цикл с генерацией случайных чисел,
+            /// при условии, что должно выпасть ровно 50
+            /// что будет, если мы будем ждать число 18? 93?
+            ///
+            /// Сколько раз повторится последний цикл (остановка, если число больше 50)
+            /// что будет, если мы будем ждать число 18? 93?
+            ///
+            /// Раскомментируйте строки Console.BackgroundColor и ForegroundColor
         }
     }
 }
