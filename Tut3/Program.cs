@@ -10,13 +10,32 @@ namespace Tut3
     {
         static void Main(string[] args)
         {
+            // Загадываем случайное число от 0 до 100
+            var r = new Random();
+            int I = r.Next(0, 101);
+
             Console.WriteLine(@"Игра 'Угадай число'
 я загадаю число от 0 до 100, вы попробуете угадать. 
 Я отвечу только больше ваше число моего или меньше.
 ");
+            int i = 0;
+            do
+            {
+                string s = Console.ReadLine();
+                i = Int32.Parse(s??"0");
 
-            Console.WriteLine("Ваше число?");
+                if (i<I)
+                {
+                    Console.WriteLine("Меньше");
+                }
+                if (i > I)
+                {
+                    Console.WriteLine("Больше");
+                }
 
+            } while (I!=i);
+
+            Console.WriteLine("Угадали!!!");
             Console.ReadLine();
 
         }
