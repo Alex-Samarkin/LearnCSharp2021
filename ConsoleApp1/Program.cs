@@ -78,6 +78,15 @@ namespace ConsoleApp1
             }
         }
 
+        public void Reset()
+        {
+            // возвращаем все карты в колоду
+            foreach (Card card in Items)
+            {
+                card.isOut = false;
+            }
+        }
+
         #region Overrides of Object
 
         public override string ToString()
@@ -125,25 +134,47 @@ namespace ConsoleApp1
 ");
             Console.ReadLine();
 
+   
+            ///TEST создаем карту и выводим ее номинал на экран
             Card card = new Card();
-
             Console.WriteLine(card);
+            Console.ReadLine();
 
+            ///TEST создаем колоду карт
             // колода
             Cards cards = new Cards();
             // создаем карты
             cards.Create();
+            Console.ReadLine();
 
+            ///TEST Выдаем одну случайную карту
             Console.WriteLine(cards.RandomCard());
             Console.WriteLine(cards);
-            Console.WriteLine(cards.RandomCard());
+            Console.ReadLine();
+
+            ///TEST Выдаем 50 карт
+            for (int i = 0; i < 50; i++)
+            {
+                Console.Write($"{i,-6} ");
+                Console.WriteLine(cards.RandomCard());
+            }
             Console.WriteLine(cards);
-            Console.WriteLine(cards.RandomCard());
+            Console.ReadLine();
+
+            ///TEST Выдаем карты, пока не выпадет дама пик
+            cards.Reset();
+            int j = 0;
+            Card c;
+            do
+            {
+                j++;
+                c = cards.RandomCard();
+                Console.WriteLine($"{j,-6} {c}");
+            } while (c.IsQueenOfSpades()!=true);
+
             Console.WriteLine(cards);
-            Console.WriteLine(cards.RandomCard());
-            Console.WriteLine(cards);
-            Console.WriteLine(cards.RandomCard());
-            Console.WriteLine(cards);
+            Console.ReadLine();
+
 
             Console.ReadLine();
         }
