@@ -14,7 +14,7 @@ namespace Tut2
 
             string name = Console.ReadLine();
 
-            Console.WriteLine($"Здрваствуйте, {name}");
+            Console.WriteLine($"Здравствуйте, {name}");
 
             Console.ReadLine();
 
@@ -23,8 +23,10 @@ namespace Tut2
             // лучше проверить, что все ОК
             /*
              * if(value == "") value = "0.0";
+             * (int) 
+             * as int
              */
-            
+            double x1 = Convert.ToDouble(value);
             double x = Double.Parse(value);
             // лучше проверить, что преобразование прошло нормально
 
@@ -33,11 +35,11 @@ namespace Tut2
 
             // добавьте необходимое
             Console.WriteLine("Если это радиус:");
-            Console.WriteLine("Длина окружности {Math.PI*x} Площадь круга {Math.PI*x*x} Объем сферы {} ");
+            Console.WriteLine($"Длина окружности {Math.PI*x} Площадь круга {Math.PI*x*x}");
 
             // добавьте необходимое
             Console.WriteLine("Если это угол в радианах:");
-            Console.WriteLine("Sin {Math.Sin(x)} Cos {Math.Cos(x)} Tan {Math.Tan(x)} Cotan {1.0/Math.Tan(x)}");
+            Console.WriteLine($"Sin {Math.Sin(x)} Cos {Math.Cos(x)} Tan {Math.Tan(x)} Cotan {1.0/Math.Tan(x)}");
 
             Console.ReadLine();
 
