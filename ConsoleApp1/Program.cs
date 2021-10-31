@@ -175,6 +175,42 @@ namespace ConsoleApp1
             Console.WriteLine(cards);
             Console.ReadLine();
 
+            cards.Reset();
+            Console.Clear();
+            Console.WriteLine(@"-----------------------------------
+Играем в игру штосс.
+Каждый ход сдается две карты - мне и вам.
+Выигрывает тот, кому придет пиковая дама (Queen of Spades).
+----------------------------------------------------------
+Нажмите <Enter> для продолжения
+
+");
+            Console.ReadLine();
+            for (int i = 0; i < cards.Items.Count; i++)
+            {
+                var c1 = cards.RandomCard();
+                var c2 = cards.RandomCard();
+
+                Console.WriteLine($"Ход {i+1}");
+                Console.WriteLine($"Моя карта {c1.ToString()}");
+                Console.WriteLine($"Ваша карта {c2.ToString()}");
+
+                if (c1.IsQueenOfSpades())
+                {
+                    Console.WriteLine("Вы проиграли!");
+                    break;
+                }
+
+                if (c2.IsQueenOfSpades())
+                {
+                    Console.WriteLine("Вы выиграли!");
+                    break;
+                }
+                 
+                Console.WriteLine("Нажмите <Enter> для следующей сдачи.");
+                Console.ReadLine();
+            }
+
 
             Console.ReadLine();
         }
