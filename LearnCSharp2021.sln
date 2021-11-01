@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tut5", "ConsoleApp1\Tut5.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tut6", "Tut6\Tut6.csproj", "{FB57D373-90AA-467A-A735-09EACB90796E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllInOne", "AllInOne\AllInOne.csproj", "{136298BD-F135-4DBD-9362-BF56452E748B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FB57D373-90AA-467A-A735-09EACB90796E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB57D373-90AA-467A-A735-09EACB90796E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB57D373-90AA-467A-A735-09EACB90796E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136298BD-F135-4DBD-9362-BF56452E748B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136298BD-F135-4DBD-9362-BF56452E748B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136298BD-F135-4DBD-9362-BF56452E748B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136298BD-F135-4DBD-9362-BF56452E748B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
