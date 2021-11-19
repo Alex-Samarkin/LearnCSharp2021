@@ -10,21 +10,27 @@ namespace Tut4
     {
         static void Main(string[] args)
         {
+            /// TODO
+            /// выберите другие цвета для вывода
+
             // генератор случайных чисел
             var r = new Random();
             // r.Next - методы генерации разных случайных чисел
 
-            //Console.BackgroundColor = ConsoleColor.DarkBlue;
-            //Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Yellow;
 
             // цикл - повторяется 100 раз
             // i - счетчик цикла, каждую итерацию увеличивается на 1
             for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine($"{i,-10} {r.Next()}");
+                Console.WriteLine($"|{i,-10}||{r.Next(),20}|");
             }
 
             Console.ReadLine();
+
+            // восстанавливает цвета консоли
+            Console.ResetColor();
 
             //Console.BackgroundColor = ConsoleColor.Cyan;
             //Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -35,6 +41,8 @@ namespace Tut4
             do
             {
                 value = r.Next(0, 101);
+                /// TODO
+                /// сделайте вывод таким, чтобы он занимал 20 позиций
                 Console.WriteLine($"{value}");
             } while (value!=50);
 
@@ -43,14 +51,16 @@ namespace Tut4
             // испраьте цикл так, чтобы он останавливался, если выпадет число, больше 50
             value = 0;
 
-            //Console.BackgroundColor = ConsoleColor.DarkGreen;
-            //Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.Magenta;
 
-            //while (value<=50)
-            //{
-            //    value = r.Next(0, 101);
-            //    Console.WriteLine($"{value}");
-            //}
+            while (value<=50)
+            {
+                value = r.Next(0, 101);
+                /// TODO
+                /// сделайте вывод таким, чтобы он занимал 20 позиций
+                Console.WriteLine($"{value}");
+            }
 
             Console.ReadLine();
 

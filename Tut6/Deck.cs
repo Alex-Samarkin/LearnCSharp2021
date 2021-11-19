@@ -44,10 +44,25 @@ namespace Tut6
                 var pos = r.Next(0, Items.Count);
                 // меняем карты (используется деконструкция вместо более привычного
                 // tmp = a, a = b, b = tmp)
-                (Items[pos], Items[i]) = (Items[i], Items[pos]);
+                if (i != pos) // добавлено - если старая и новая позиции одинаковые, то нет смысла перемешивать
+                {
+                    (Items[pos], Items[i]) = (Items[i], Items[pos]);
+                }
             }
 
             Position = 0;
+        }
+
+        /// <summary>
+        ///  многократное перемешивание колоды 
+        /// </summary>
+        /// <param name="N"> количество перемешиваний</param>
+        public void ShuffleN(int N = 2)
+        {
+            for (int i = 0; i < N; i++)
+            {
+                Shuffle();
+            }
         }
 
         public void Reset()

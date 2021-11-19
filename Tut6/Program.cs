@@ -22,7 +22,11 @@ namespace Tut6
             Console.ReadLine();
             Console.WriteLine(d.RandomCard());
 
-            d.Shuffle();
+            /// d.Shuffle();
+            
+            // улучшенный алгоритм перемешивания (на самом деле все равно плохой)
+            // что плохого в алгоритме перемешивания?
+            d.ShuffleN(15);
 
             Console.Clear();
             Console.WriteLine(@"___________________________________________________________

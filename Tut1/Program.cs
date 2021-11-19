@@ -25,7 +25,20 @@ namespace Tut1
             Console.ReadLine();
 
             //вывод версия 2
-            Console.WriteLine($"x= {x,0:g15} y= {y,0:N-15} x+y= {x+y}");
+            //объясните разницу между выводом первой и второй строки
+            Console.WriteLine($"x= {x,0:g15} y= {y,-15} x+y= {x+y}");
+            Console.WriteLine($"x= {x,0:g15} y= {y,15} x+y= {x + y}");
+            Console.ReadLine();
+
+            /// TODO
+            /// Напечатайте свою фамилию
+            /// Напечатайте сегодняшнюю дату
+            /// Напечатайте дату, как результат вывода свойста (скобки не нужны)
+            /// DateTime.Today
+            /// DateTime.Now
+            /// объясните разницу
+            Console.WriteLine();
+            Console.WriteLine();
             Console.ReadLine();
 
         }
